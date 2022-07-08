@@ -15,7 +15,7 @@ document.getElementById("btn").addEventListener('click',(e)=>{
     img.src=data.avatar_url;
     img.classList.add("image")
 document.getElementById('container').appendChild(img)
-// .catch(data=>data="error")
-})
 
+})
+.catch(err=>console.log(err+" error"))
 })
