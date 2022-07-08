@@ -18,13 +18,14 @@ document.getElementById('container').appendChild(img)
 
 })
 .catch(err=>{
-  const olderror=document.querySelector('h1')
+  const olderror=document.querySelector('h4')
     if (olderror){
         olderror.remove();
     }
     err ="error"
-    let faute = document.createElement('h1')
-    faute.textContent = err
+    let faute = document.createElement('h4')
+    faute.textContent = err;
+    faute.style.color="red";
     console.log(faute)
     document.getElementById('container').appendChild(faute)
 
