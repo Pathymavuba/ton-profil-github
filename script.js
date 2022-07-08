@@ -17,5 +17,16 @@ document.getElementById("btn").addEventListener('click',(e)=>{
 document.getElementById('container').appendChild(img)
 
 })
-.catch(err=>console.log(err+" error"))
+.catch(err=>{
+  const olderror=document.querySelector('h1')
+    if (olderror){
+        olderror.remove();
+    }
+    err ="error"
+    let faute = document.createElement('h1')
+    faute.textContent = err
+    console.log(faute)
+    document.getElementById('container').appendChild(faute)
+
+})
 })
